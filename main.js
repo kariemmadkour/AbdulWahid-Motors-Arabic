@@ -5,9 +5,11 @@
 // ── TRANSLATIONS ──
 const T = {
   en: {
-    'meta.title':        'AbdulWahid Motors — Drive the Extraordinary',
+    'meta.title':        'AbdulWahid Motors — New & Luxury Automobiles',
     'brand.name':        'AbdulWahid',
     'brand.suffix':      'Motors',
+    'brand.full':        'ABDULWAHID MOTORS',
+    'brand.slogan':      'New & Luxury Automobiles',
     'loader.tagline':    'Preparing your experience',
     'nav.vehicles':      'Vehicles',
     'nav.arrivals':      'New Arrivals',
@@ -163,9 +165,11 @@ const T = {
   },
 
   ar: {
-    'meta.title':        'معرض عبد الواحد للسيارات — اقُد الاستثنائي',
-    'brand.name':        'عبد الواحد',
-    'brand.suffix':      'للسيارات',
+    'meta.title':        'عبدالواحد موتورز — سيارات جديدة وفاخرة',
+    'brand.name':        'عبدالواحد',
+    'brand.suffix':      'موتورز',
+    'brand.full':        'عبدالواحد موتورز',
+    'brand.slogan':      'سيارات جديدة وفاخرة',
     'loader.tagline':    'جاري تحضير تجربتك',
     'nav.vehicles':      'السيارات',
     'nav.arrivals':      'الوصول الجديد',
@@ -367,7 +371,7 @@ function applyLang(lang) {
   });
 
   // Lang toggle buttons — all sets (nav + mobile)
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-pill__btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 
@@ -427,7 +431,7 @@ mobileNav.querySelectorAll('a').forEach(a =>
 );
 
 // ── LANGUAGE TOGGLE ──
-document.querySelectorAll('.lang-btn').forEach(btn => {
+document.querySelectorAll('.lang-pill__btn').forEach(btn => {
   btn.addEventListener('click', () => {
     if (btn.dataset.lang !== currentLang) applyLang(btn.dataset.lang);
   });

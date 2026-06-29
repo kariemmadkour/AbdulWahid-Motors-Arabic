@@ -1387,3 +1387,200 @@ em { font-style: italic; color: var(--gold); }
   [dir="rtl"] .hero__stats { right: 3vw; }
   [dir="rtl"] .trade-in__badge-float { left: 0; right: auto; }
 }
+
+/* ══════════════════════════════════════════
+   BRAND LOGO (replaces nav__logo)
+══════════════════════════════════════════ */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand-logo__gem {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(201,168,76,0.25));
+  transition: filter 0.3s;
+}
+.brand-logo:hover .brand-logo__gem {
+  filter: drop-shadow(0 0 14px rgba(201,168,76,0.5));
+}
+.brand-logo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+.brand-logo__name {
+  font-family: var(--ff-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+.brand-logo__rule {
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  opacity: 0.5;
+}
+.brand-logo__slogan {
+  font-family: var(--ff-sans);
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Footer logo */
+.brand-logo--footer .brand-logo__gem { width: 48px; height: 48px; }
+.brand-logo--footer .brand-logo__name { font-size: 1.1rem; }
+
+/* Loader emblem + wordmark */
+.loader__emblem {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  animation: gemPulse 2s ease-in-out infinite;
+}
+@keyframes gemPulse {
+  0%,100% { filter: drop-shadow(0 0 6px rgba(201,168,76,0.3)); }
+  50% { filter: drop-shadow(0 0 18px rgba(201,168,76,0.7)); }
+}
+.loader__wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 2.2rem;
+}
+.loader__brand {
+  font-family: var(--ff-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.loader__slogan {
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════
+   LANGUAGE PILL (new design)
+══════════════════════════════════════════ */
+.lang-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.28rem 0.55rem 0.28rem 0.45rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 100px;
+  margin-left: 0.9rem;
+  flex-shrink: 0;
+  color: var(--grey);
+}
+.lang-pill svg { flex-shrink: 0; stroke: var(--gold); }
+.lang-pill__btn {
+  background: none;
+  border: none;
+  padding: 0.22rem 0.5rem;
+  font-family: var(--ff-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.25s;
+  line-height: 1;
+}
+.lang-pill__btn:hover { color: var(--white); }
+.lang-pill__btn.active {
+  background: var(--gold);
+  color: var(--black);
+}
+.lang-pill__sep {
+  width: 1px;
+  height: 10px;
+  background: rgba(201,168,76,0.25);
+  border-radius: 1px;
+}
+
+.mobile-lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  margin-top: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 100px;
+  width: fit-content;
+  align-self: center;
+}
+.mobile-lang-toggle .lang-pill__btn { font-size: 0.85rem; padding: 0.35rem 0.8rem; }
+.mobile-lang-toggle .lang-pill__sep { height: 14px; }
+
+/* ══════════════════════════════════════════
+   SPEC ITEMS (vehicle cards)
+══════════════════════════════════════════ */
+.spec-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  font-size: 0.72rem;
+  color: var(--grey-lt);
+}
+.spec-item svg { stroke: var(--gold); flex-shrink: 0; }
+
+/* ══════════════════════════════════════════
+   ARABIC FONT (Tajawal replaces Cairo)
+══════════════════════════════════════════ */
+[dir="rtl"] {
+  font-family: 'Tajawal', system-ui, sans-serif;
+}
+[dir="rtl"] .section__title,
+[dir="rtl"] .hero__title,
+[dir="rtl"] .loader__brand,
+[dir="rtl"] .brand-logo__name {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  font-weight: 300;
+}
+[dir="rtl"] .brand-logo__name {
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+}
+[dir="rtl"] .brand-logo__slogan {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 0.62rem;
+}
+[dir="rtl"] .loader__slogan {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  letter-spacing: 0.06em;
+}
+[dir="rtl"] .loader__brand {
+  letter-spacing: 0.06em;
+}
+[dir="rtl"] .brand-logo__rule {
+  background: linear-gradient(270deg, var(--gold), transparent);
+}
+
+/* RTL logo layout */
+[dir="rtl"] .brand-logo { flex-direction: row-reverse; }
+[dir="rtl"] .brand-logo__text { text-align: right; }
+[dir="rtl"] .lang-pill { margin-left: 0; margin-right: 0.9rem; }
+[dir="rtl"] .loader__wordmark { direction: rtl; }
