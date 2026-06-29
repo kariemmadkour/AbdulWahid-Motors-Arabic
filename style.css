@@ -243,7 +243,7 @@ em { font-style: italic; color: var(--gold); }
 .nav__logo-text span { font-size: 1rem; font-weight: 400; letter-spacing: 0.05em; }
 .nav__logo-text em { font-size: 0.7rem; color: var(--gold); letter-spacing: 0.18em; font-weight: 300; font-style: italic; }
 
-.nav__links { display: flex; gap: 2.5rem; margin: 0 2.5rem; }
+.nav__links { display: flex; gap: 1.8rem; margin: 0 1.5rem; }
 .nav__links a {
   font-size: 0.72rem;
   font-weight: 500;
@@ -1584,3 +1584,11 @@ em { font-style: italic; color: var(--gold); }
 [dir="rtl"] .brand-logo__text { text-align: right; }
 [dir="rtl"] .lang-pill { margin-left: 0; margin-right: 0.9rem; }
 [dir="rtl"] .loader__wordmark { direction: rtl; }
+
+/* Nav CTA — compact to fit in header */
+.nav__cta {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.68rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
