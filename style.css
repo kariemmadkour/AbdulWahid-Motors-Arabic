@@ -1592,3 +1592,53 @@ em { font-style: italic; color: var(--gold); }
   white-space: nowrap;
   flex-shrink: 0;
 }
+
+/* ══════════════════════════════════════════
+   ARABIC BUTTON FIXES
+   Arabic script must have zero letter-spacing
+   (letter-spacing breaks connected letterforms)
+══════════════════════════════════════════ */
+[dir="rtl"] .btn {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  padding: 0.9rem 2rem;
+  white-space: nowrap;
+}
+[dir="rtl"] .btn--sm {
+  font-size: 0.82rem;
+  padding: 0.55rem 1.2rem;
+}
+[dir="rtl"] .btn--lg {
+  font-size: 1rem;
+  padding: 1rem 2.4rem;
+}
+[dir="rtl"] .nav__cta {
+  font-size: 0.82rem;
+  padding: 0.6rem 1.3rem;
+}
+[dir="rtl"] .vtab {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  letter-spacing: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+[dir="rtl"] .vehicle-card__btn {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  letter-spacing: 0;
+  font-size: 0.82rem;
+}
+[dir="rtl"] .section__eyebrow {
+  letter-spacing: 0.06em;
+  font-family: 'Tajawal', system-ui, sans-serif;
+}
+[dir="rtl"] .nav__links a {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  letter-spacing: 0;
+  font-size: 0.88rem;
+}
+[dir="rtl"] .lang-pill__btn {
+  font-family: var(--ff-sans);
+  letter-spacing: 0.08em;
+}
